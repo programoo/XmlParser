@@ -1,5 +1,8 @@
 import java.io.IOException;
 import java.io.StringReader;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -16,6 +19,15 @@ public class XmlParser {
 	public static void main(String[] grean) {
 		System.out.println("hello java xml");
 		XmlParserJa();
+		//test date
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		Date date = new Date();
+		String dateStart = dateFormat.format(date)+" 00:00:01";
+		String dateEnd = dateFormat.format(date)+" 23:59:59";
+
+		System.out.println(dateStart);
+
+		System.out.println(dateEnd);
 	}
 
 	public static String getXmlString() {
